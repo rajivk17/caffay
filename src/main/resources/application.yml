@@ -1,0 +1,24 @@
+server:
+  port: 7171
+
+spring:
+  application:
+    name: koraq
+
+management:
+  server:
+    port: 7777
+    base-path: /
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include:
+        - "*" 
